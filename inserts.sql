@@ -19,6 +19,7 @@ insert into routes values (3, '2022-08-03', 13, 2, 4, 'DME', 50)
 insert into routes values (4, '2022-11-03', 14, 1, 3, 'SVO', 15)
 insert into routes values (6, '2022-12-03', 13, 4, 3, 'VKO', 75)
 
+-- для дебага
 select * from airplanesf
 select * from pilots
 select * from routes
