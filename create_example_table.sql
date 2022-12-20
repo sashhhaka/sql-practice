@@ -11,3 +11,5 @@ foreign key (plane_id) references airplanesf(plane_id),
 foreign key (first_pilot_id) references pilots(pilot_id),
 foreign key (second_pilot_id) references pilots(pilot_id)
 )
+
+-- две другие таблицы были сделаны в ssms в обозревателе объектов
