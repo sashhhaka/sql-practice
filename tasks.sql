@@ -19,3 +19,12 @@ join routes on pilots.pilot_id=routes.first_pilot_id or pilots.pilot_id=routes.s
 join airplanesf on routes.plane_id=airplanesf.plane_id
 where pilots.age > 45 and routes.quantity > 30 and airplanesf.cargo_flg = 0
 group by pilots.pilot_id, pilots.name
+
+--3)
+-- Топ 10 пилотов-капитанов (first_pilot_id), 
+--которые совершили наибольшее число грузовых перелетов в этом году
+select top 10 first_pilot_id, count(flight_id) as flights from routes
+join airplanesf on routes.plane_id=airplanesf.plane_id
+where airplanesf.cargo_flg=1
+group by routes.first_pilot_id
+order by flights desc
