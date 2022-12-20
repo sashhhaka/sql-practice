@@ -1,9 +1,10 @@
+-- РґР»СЏ РґРµР±Р°РіР°
 select * from airplanesf
 select * from pilots
 select * from routes
 --1)
---запрос выводит пилотов которые были вторыми пилотами в августе этого года
--- которые ездили в svo
+-- Р·Р°РїСЂРѕСЃ РІС‹РІРѕРґРёС‚ РїРёР»РѕС‚РѕРІ РєРѕС‚РѕСЂС‹Рµ РІ РєР°С‡РµСЃС‚РІРµ РІС‚РѕСЂС‹С… РїРёР»РѕС‚РѕРІ 
+--Р»РµС‚Р°Р»Рё РІ РЁРµСЂРµРјРµС‚СЊРµРІРѕ 3 СЂР°Р·Р° РІ Р°РІРіСѓСЃС‚Рµ СЌС‚РѕРіРѕ РіРѕРґР°
 select second_pilot_id from routes
 where destination = 'SVO' and month(flight_dt) = 8
 group by second_pilot_id
